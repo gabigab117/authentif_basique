@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Créer un compte</title>
+</head>
+<body>
+
+<form method="POST">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+    <!--
+    ici c'est un dictionnaire dans mon context dans le cadre d'un form
+    -->
+{% for message in errors.values %}
+    <h3 style="color: red;">
+
+        {{ message }}
+    </h3>
+    {% endfor %}
+    <input type="submit" value="s'inscrire">
+</form>
+
+</body>
+</html>
