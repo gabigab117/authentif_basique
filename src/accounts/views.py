@@ -18,7 +18,7 @@ from django.contrib.auth.forms import UserCreationForm
 #
 #     return render(request, "accounts/signup.html")
 
-# on est obligé de customiser car on a une classe User Custom
+# on est obligé de customiser car on a une classe User Custom (on créer notre propre formulaire)
 class CustomSignupForm(UserCreationForm):
     class Meta:
         model = CustomUser
